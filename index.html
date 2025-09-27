@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ExploreMore Travels</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #004aad;
+      padding: 1rem;
+    }
+
+    .mobile-nav a {
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .rate-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #004aad;
+    }
+
+    .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .card button {
+      margin-top: 10px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #003a8c;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #004aad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #003a8c;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://via.placeholder.com/150x50?text=ExploreMore" alt="Company Logo" />
+    <nav id="main-nav">
+      <a href="#">Home</a>
+      <a href="#">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#">Home</a>
+    <a href="#">Packages</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Rate Cards – Popular Tour Packages</h2>
+    <div class="rate-cards">
+      <div class="card">
+        <h3>Paris Getaway</h3>
+        <p>5 Days, 4 Nights – Flights + Hotel + Tours</p>
+        <p class="price">$1,200</p>
+        <button onclick="alert('Booking Paris Getaway')">Book Now</button>
+      </div>
+      <div class="card">
+        <h3>Discover Bali</h3>
+        <p>6 Days, 5 Nights – Flights + Resort + Activities</p>
+        <p class="price">$950</p>
+        <button onclick="alert('Booking Bali Tour')">Book Now</button>
+      </div>
+      <div class="card">
+        <h3>Swiss Alps Adventure</h3>
+        <p>7 Days, 6 Nights – Mountain Tours + Train Ride</p>
+        <p class="price">$1,700</p>
+        <button onclick="alert('Booking Swiss Alps')">Book Now</button>
+      </div>
+      <div class="card">
+        <h3>Dubai Luxury Tour</h3>
+        <p>4 Days, 3 Nights – Desert Safari + Shopping</p>
+        <p class="price">$1,050</p>
+        <button onclick="alert('Booking Dubai Tour')">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form" id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ExploreMore Travels. All rights reserved.</p>
+    <p>Email: support@exploremortravels.com | Phone: +1-234-567-890</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
