@@ -212,28 +212,7 @@
     e.preventDefault();
   });
 
-  // Disable key combinations
-  document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.keyCode === 123) {
-      e.preventDefault();
-      return false;
-    }
-
-    // Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+Shift+J
-    if (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) {
-      e.preventDefault();
-      return false;
-    }
-
-    // Ctrl+U
-    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-
+  // Disable key combinations ...
 </script>
 
 
