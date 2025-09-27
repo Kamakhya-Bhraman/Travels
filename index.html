@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">	
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ExploreMore Travels</title>
+  <title>Kamakhya Bhraman (कामाख्या भ्रमण)</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,7 +14,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background-color: #ccffcc; /* light green background */
+      color: #222;
     }
 
     header {
@@ -24,10 +26,21 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
     }
 
     header img {
       height: 50px;
+    }
+
+    /* Logo text styling */
+    .logo-text {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: gold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      margin-left: 15px;
     }
 
     nav {
@@ -68,6 +81,8 @@
 
     .mobile-nav a {
       margin-bottom: 0.5rem;
+      color: white;
+      text-decoration: none;
     }
 
     .container {
@@ -77,14 +92,8 @@
     }
 
     h2 {
-      color: #333;
+      color: #004aad;
       margin-bottom: 1rem;
-    }
-
-    .rate-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
     }
 
     .card {
@@ -92,11 +101,8 @@
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      margin-bottom: 1.5rem;
+      color: #222;
     }
 
     .card h3 {
@@ -104,24 +110,42 @@
       color: #004aad;
     }
 
-    .price {
-      color: #28a745;
-      font-weight: bold;
+    /* Why Travel Section */
+    .highlights {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .highlights h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #004aad;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .highlight-item {
+      background: #f4f9f4;
+      padding: 1.2rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight-item h3 {
       margin-top: 0.5rem;
-    }
-
-    .card button {
-      margin-top: 10px;
-      background-color: #004aad;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #003a8c;
+      color: #28a745;
     }
 
     /* Contact Form */
@@ -131,6 +155,10 @@
       margin-top: 3rem;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+      color: #004aad;
     }
 
     .contact-form input,
@@ -183,10 +211,12 @@
 
   <!-- Header -->
   <header>
-    <img src="https://via.placeholder.com/150x50?text=ExploreMore" alt="Company Logo" />
+    <img src="C:\Users\Anubhav\Pictures\Screenshots\Copilot_20250927_133140.png" alt="कामाख्या भ्रमण Logo" />
+    <div class="logo-text">Kamakhya Bhraman (कामाख्या भ्रमण)</div>
     <nav id="main-nav">
       <a href="#">Home</a>
-      <a href="#">Packages</a>
+      <a href="#tariffs">Tariffs</a>
+      <a href="#highlights">Highlights</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -201,56 +231,97 @@
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobile-nav">
     <a href="#">Home</a>
-    <a href="#">Packages</a>
+    <a href="#tariffs">Tariffs</a>
+    <a href="#highlights">Highlights</a>
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Main Content -->
-  <div class="container">
-    <h2>Rate Cards – Popular Tour Packages</h2>
-    <div class="rate-cards">
-      <div class="card">
-        <h3>Paris Getaway</h3>
-        <p>5 Days, 4 Nights – Flights + Hotel + Tours</p>
-        <p class="price">$1,200</p>
-        <button onclick="alert('Booking Paris Getaway')">Book Now</button>
-      </div>
-      <div class="card">
-        <h3>Discover Bali</h3>
-        <p>6 Days, 5 Nights – Flights + Resort + Activities</p>
-        <p class="price">$950</p>
-        <button onclick="alert('Booking Bali Tour')">Book Now</button>
-      </div>
-      <div class="card">
-        <h3>Swiss Alps Adventure</h3>
-        <p>7 Days, 6 Nights – Mountain Tours + Train Ride</p>
-        <p class="price">$1,700</p>
-        <button onclick="alert('Booking Swiss Alps')">Book Now</button>
-      </div>
-      <div class="card">
-        <h3>Dubai Luxury Tour</h3>
-        <p>4 Days, 3 Nights – Desert Safari + Shopping</p>
-        <p class="price">$1,050</p>
-        <button onclick="alert('Booking Dubai Tour')">Book Now</button>
-      </div>
+<!-- Tariff Section -->
+<div id="tariffs">
+  <h2 style="color:#004aad; text-align:center; font-size:1.8rem;">
+    💸 Tariff Plans
+  </h2>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-around; gap:20px; margin-top:20px;">
+
+    <!-- 8 Hour Plan -->
+    <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
+      <h3 style="color:#004aad;">🕗 8-Hour Round Trip</h3>
+      <p>🛣️ <strong>Max:</strong> 200 km</p>
+      <p>💰 <strong>₹2500</strong> Fixed</p>
+      <p>⏱️ Extra Hour: ₹150</p>
+      <p>➕ Extra Km: ₹7</p>
+      <p>🚫 <em>No extension post 9 PM</em></p>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form" id="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <!-- 12 Hour Plan -->
+    <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
+      <h3 style="color:#004aad;">🕛 12-Hour Round Trip</h3>
+      <p>🛣️ <strong>Max:</strong> 400 km</p>
+      <p>💰 <strong>₹3600</strong> Fixed</p>
+      <p>⏱️ Extra Hour: ₹150</p>
+      <p>➕ Extra Km: ₹6</p>
+      <p>🚫 <em>No extension post 9 PM</em></p>
     </div>
+
+    <!-- One Way Plan -->
+    <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
+      <h3 style="color:#004aad;">🛣️ One Way Trip</h3>
+      <p>💸 ₹10/km (Min 250 km)</p>
+      <p>⏳ Halt > 2 hrs: ₹200/hr</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <!-- Why Travel Section -->
+  <div class="container highlights" id="highlights">
+    <h2>Why Travel with Kamakhya Bhraman (कामाख्या भ्रमण) Cabs in Varanasi?</h2>
+    <div class="highlight-grid">
+      <div class="highlight-item">
+        <h3>💰 Lowest Cost</h3>
+        <p>Best pricing in the segment with no hidden charges.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>⭐ Top Rated Drivers</h3>
+        <p>Professional, courteous and highly rated drivers.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>⏰ On Time</h3>
+        <p>Reliable cabs that always arrive on schedule.</p>
+      </div>
+      <div class="highlight-item">
+        <h3>🧼 Clean & Comfortable</h3>
+        <p>Well-maintained vehicles for a smooth journey.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form" id="contact">
+    <h2>Contact Us</h2>
+	<form action="https://formsubmit.co/anubhavrupesh@gmail.com" method="POST">
+  	<input type="text" name="name" placeholder="Your Name" required />
+  	<input type="email" name="email" placeholder="Your Email" required />
+  	<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  	<!-- Optional Customizations -->
+  	<input type="hidden" name="_subject" value="New Inquiry from Kamakhya Bhraman Website">
+  	<input type="hidden" name="_captcha" value="false">
+  	<input type="hidden" name="_template" value="table">
+
+  	<button type="submit">Send Message</button>
+	</form>
+
+
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ExploreMore Travels. All rights reserved.</p>
-    <p>Email: support@exploremortravels.com | Phone: +1-234-567-890</p>
+    <p>&copy; 2025 Kamakhya Bhraman (कामाख्या भ्रमण). All rights reserved.</p>
+    <p>Email: support@kamakhyabhraman.com | Phone: +91-98765-43210</p>
   </footer>
 
   <!-- JavaScript for Menu Toggle -->
@@ -263,4 +334,3 @@
 
 </body>
 </html>
-
