@@ -206,7 +206,39 @@
       }
     }
   </style>
+<script>
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable key combinations
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+
+    // Ctrl+Shift+I, Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) {
+      e.preventDefault();
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+
+    // Ctrl+Shift+J (DevTools console)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+      e.preventDefault();
+    }
+  });
+</script>
+
 </head>
+
+
 <body>
 
   <!-- Header -->
@@ -247,10 +279,10 @@
     <!-- 8 Hour Plan -->
     <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
       <h3 style="color:#004aad;">🕗 8-Hour Round Trip</h3>
-      <p>🛣️ <strong>Max:</strong> 200 km</p>
-      <p>💰 <strong>₹2500</strong> Fixed</p>
-      <p>⏱️ Extra Hour: ₹150</p>
-      <p>➕ Extra Km: ₹7</p>
+      <p>🛣️ <strong>Max:</strong> 250 km</p>
+      <p>💰 <strong>₹3125</strong> Fixed</p>
+      <p>⏱️ Extra Hour: ₹200/Hour</p>
+      <p>➕ Extra Km: ₹8/Km</p>
       <p>🚫 <em>No extension post 9 PM</em></p>
     </div>
 
@@ -258,17 +290,17 @@
     <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
       <h3 style="color:#004aad;">🕛 12-Hour Round Trip</h3>
       <p>🛣️ <strong>Max:</strong> 400 km</p>
-      <p>💰 <strong>₹3600</strong> Fixed</p>
-      <p>⏱️ Extra Hour: ₹150</p>
-      <p>➕ Extra Km: ₹6</p>
+      <p>💰 <strong>₹4000</strong> Fixed</p>
+      <p>⏱️ Extra Hour: ₹150/Hour</p>
+      <p>➕ Extra Km: ₹7/Km</p>
       <p>🚫 <em>No extension post 9 PM</em></p>
     </div>
 
     <!-- One Way Plan -->
     <div style="flex:1; min-width:280px; background:#e6f2ff; border-radius:10px; padding:15px;">
       <h3 style="color:#004aad;">🛣️ One Way Trip</h3>
-      <p>💸 ₹10/km (Min 250 km)</p>
-      <p>⏳ Halt > 2 hrs: ₹200/hr</p>
+      <p>💸 ₹13/km (Min 250 km)</p>
+      <p>⏳ Halt > 1 hrs: ₹250 + ₹250/Hour </p>
     </div>
 
   </div>
