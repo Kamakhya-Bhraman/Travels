@@ -215,26 +215,35 @@
   // Disable key combinations
   document.addEventListener('keydown', function(e) {
     // F12
-    if (e.key === 'F12') {
+    if (e.keyCode === 123) {
       e.preventDefault();
+      return false;
     }
 
-    // Ctrl+Shift+I, Ctrl+Shift+C
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) {
+    // Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && ['I', 'C', 'J'].includes(e.key.toUpperCase())) {
       e.preventDefault();
+      return false;
     }
 
     // Ctrl+U
-    if (e.ctrlKey && e.key === 'u') {
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
       e.preventDefault();
-    }
-
-    // Ctrl+Shift+J (DevTools console)
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-      e.preventDefault();
+      return false;
     }
   });
+
+  // Detect DevTools open (basic)
+  setInterval(function() {
+    const devtools = /./;
+    devtools.toString = function() {
+      alert('Developer tools are disabled on this site.');
+      return '';
+    };
+    console.log('%c', devtools);
+  }, 1000);
 </script>
+
 
 </head>
 
