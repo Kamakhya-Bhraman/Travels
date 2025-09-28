@@ -75,6 +75,41 @@
 
     .btn:hover { background-color: #003a8c; }
 
+    /* Success spinner/check animation */
+    .success-icon {
+      margin: 0 auto 20px auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #28a745;
+      animation: spin 1s linear infinite;
+      position: relative;
+    }
+
+    .success-icon::after {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #28a745;
+      font-size: 28px;
+      opacity: 0;
+      animation: fadeIn 1s forwards 0.5s;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
     footer {
       background-color: #222;
       color: white;
@@ -92,11 +127,12 @@
   <!-- Header -->
   <header>
     <a href="index.html"><img src="logo.png" alt="KCS Logo"></a>
-    <div class="logo-text">KCS</div>
+    <div class="logo-text">KCS - Kamakhya Cab Services</div>
   </header>
 
   <!-- Main Content -->
   <main class="container">
+    <div class="success-icon"></div>
     <h1>✅ Thank You!</h1>
     <p>Your message has been sent successfully. Our team will get back to you shortly.</p>
     <p>We appreciate your interest in <strong>KCS - Kamakhya Cab Services</strong>.</p>
@@ -105,10 +141,10 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 KCS. All rights reserved.</p>
+    <p>&copy; 2025 KCS - Kamakhya Cab Services. All rights reserved.</p>
     <p>
-      <a href="mailto:kamakhyabhraman@gmail.com"><i class="fa fa-envelope"></i> kamakhyabhraman@gmail.com</a> | 
-      <a href="tel:+919519251153"><i class="fa fa-phone"></i> +91-95192-51153</a>
+      <a href="mailto:kamakhyabhraman@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Email Us</a> |
+      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20KCS" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </p>
   </footer>
 
