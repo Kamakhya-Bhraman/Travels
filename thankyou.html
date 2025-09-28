@@ -75,7 +75,7 @@
 
     .btn:hover { background-color: #003a8c; }
 
-    /* Success spinner/check animation */
+    /* Success animation */
     .success-icon {
       margin: 0 auto 20px auto;
       width: 60px;
@@ -83,7 +83,7 @@
       border-radius: 50%;
       border: 6px solid #f3f3f3;
       border-top: 6px solid #28a745;
-      animation: spin 1s linear infinite;
+      animation: spin 1s linear forwards;
       position: relative;
     }
 
@@ -94,11 +94,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(0);
       color: #28a745;
       font-size: 28px;
-      opacity: 0;
-      animation: fadeIn 1s forwards 0.5s;
+      animation: checkScale 0.5s forwards 1s;
     }
 
     @keyframes spin {
@@ -106,8 +105,8 @@
       100% { transform: rotate(360deg); }
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    @keyframes checkScale {
+      to { transform: translate(-50%, -50%) scale(1); }
     }
 
     footer {
@@ -141,7 +140,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 KCS - Kamakhya Cab Services. All rights reserved.</p>
+    <p>&copy; 2025 KCS. All rights reserved.</p>
     <p>
       <a href="mailto:kamakhyabhraman@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Email Us</a> |
       <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20KCS" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
