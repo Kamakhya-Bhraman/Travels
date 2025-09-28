@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kamakhya Bhraman (कामाख्या भ्रमण)</title>
 
-  <!-- Font Awesome (with integrity) -->
+  <!-- Font Awesome -->
   <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-    integrity="sha512-1K6vI1ypAJcH0q7FvR+lvb3ZxjtYrSODnAA/rB+tw7yFuUOQIrhL1KXJk7Jf6zT4rY6d0rGRP8D+eRQlXb7yIg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"
   />
 
@@ -34,24 +33,18 @@
       flex-wrap: wrap;
     }
 
-    header img {
-      height: 50px;
-      cursor: pointer;
-    }
+    header img { height: 50px; cursor: pointer; }
 
     .logo-text {
       font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: bold;
       color: gold;
       margin-left: 10px;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
 
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+    nav { display: flex; gap: 20px; align-items: center; }
 
     nav a {
       color: white;
@@ -61,21 +54,25 @@
     }
 
     nav a:hover,
-    nav a.active {
-      text-decoration: underline;
+    nav a.active { text-decoration: underline; }
+
+    /* Support icons */
+    nav a i,
+    .mobile-support-icons a i {
+      font-size: 1.3rem;
+      color: white;
+      transition: color 0.3s ease;
     }
+    nav a i:hover { color: gold; }
+    .mobile-support-icons a i:hover { color: gold; }
 
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
-
     .hamburger div {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 4px 0;
+      width: 25px; height: 3px; background: white; margin: 4px 0;
     }
 
     .mobile-nav {
@@ -84,24 +81,21 @@
       background-color: #004aad;
       padding: 1rem;
     }
-
     .mobile-nav a {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
       color: white;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .mobile-support-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 1rem;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h2 {
-      color: #004aad;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    h2 { color: #004aad; margin-bottom: 1rem; text-align: center; }
 
     .card {
       background: white;
@@ -118,23 +112,19 @@
       margin: 2rem auto;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     .highlight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
       text-align: center;
     }
-
     .highlight-item {
       background: #f4f9f4;
       padding: 1.2rem;
       border-radius: 8px;
       transition: transform 0.3s ease;
     }
-
     .highlight-item:hover { transform: translateY(-5px); }
-
     .highlight-item h3 { color: #28a745; }
 
     .contact-form {
@@ -144,7 +134,6 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -153,7 +142,6 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-
     .contact-form button {
       background-color: #004aad;
       color: white;
@@ -162,7 +150,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .contact-form button:hover { background-color: #003a8c; }
 
     footer {
@@ -172,7 +159,6 @@
       padding: 1rem;
       margin-top: 3rem;
     }
-
     footer a { color: gold; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
@@ -181,6 +167,11 @@
       nav { display: none; }
       .hamburger { display: flex; }
       .mobile-nav.active { display: flex; }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
@@ -192,20 +183,13 @@
     <div class="logo-text">Kamakhya Bhraman (कामाख्या भ्रमण)</div>
 
     <nav id="main-nav">
-    <a href="#">Home</a>
-    <a href="#tariffs">Tariffs</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#contact">Contact</a>
-
-    <!-- Support Icons -->
-    <a href="mailto:kamakhyabhraman@gmail.com" title="Email Support">
-    <i class="fa-solid fa-envelope"></i>
-    </a>
-     <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20Kamakhya%20Bhraman" target="_blank" title="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-    </a>
+      <a href="#">Home</a>
+      <a href="#tariffs">Tariffs</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:kamakhyabhraman@gmail.com" title="Email Support"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20Kamakhya%20Bhraman" target="_blank" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     </nav>
-
 
     <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <div></div><div></div><div></div>
@@ -214,9 +198,14 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobile-nav">
+    <a href="#">Home</a>
     <a href="#tariffs">Tariffs</a>
     <a href="#highlights">Highlights</a>
     <a href="#contact">Contact</a>
+    <div class="mobile-support-icons">
+      <a href="mailto:kamakhyabhraman@gmail.com" title="Email Support"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20Kamakhya%20Bhraman" target="_blank" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
   </div>
 
   <!-- Tariff Section -->
@@ -258,78 +247,45 @@
     </div>
   </section>
 
-<!-- Contact Form -->
-<div class="contact-form" id="contact">
-  <h2>Contact Us</h2>
-  <form id="contactForm" action="https://formsubmit.co/kamakhyabhraman@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <!-- Contact Form -->
+  <div class="contact-form" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://formsubmit.co/kamakhyabhraman@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_subject" value="New Inquiry from Kamakhya Bhraman Website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kamakhya-bhraman.github.io/Travels/thankyou.html">
+      <button type="submit">Send Message</button>
+    </form>
 
-    <!-- Hidden Customizations -->
-    <input type="hidden" name="_subject" value="New Inquiry from Kamakhya Bhraman Website">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://kamakhya-bhraman.github.io/Travels/thankyou.html">
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <!-- Loading Spinner -->
-  <div id="loadingSpinner" style="display:none; margin-top:20px; text-align:center;">
-    <div style="border:6px solid #f3f3f3; border-top:6px solid #004aad; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto;"></div>
-    <p style="margin-top:10px; color:#004aad; font-weight:bold;">Sending your message...</p>
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" style="display:none; margin-top:20px; text-align:center;">
+      <div style="border:6px solid #f3f3f3; border-top:6px solid #004aad; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto;"></div>
+      <p style="margin-top:10px; color:#004aad; font-weight:bold;">Sending your message...</p>
+    </div>
   </div>
-</div>
-
-<style>
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-</style>
-
-<script>
-  // Show spinner on form submit
-  const form = document.getElementById("contactForm");
-  const spinner = document.getElementById("loadingSpinner");
-
-  form.addEventListener("submit", function() {
-    spinner.style.display = "block";
-  });
-</script>
-
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Kamakhya Bhraman. All rights reserved.</p>
     <p>
-    <a href="mailto:kamakhyabhraman@gmail.com" target="_blank">
-    <i class="fa-solid fa-envelope"></i> Support: kamakhyabhraman@gmail.com
-    </a> | 
-    <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20Kamakhya%20Bhraman" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-    </a>
+      <a href="mailto:kamakhyabhraman@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> |
+      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20Kamakhya%20Bhraman" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </p>
-
   </footer>
 
-  <!-- JS -->
   <script>
     function toggleMenu() {
       document.getElementById("mobile-nav").classList.toggle("active");
     }
 
-    // Simple form validation
-    function validateForm() {
-      const email = document.getElementById("email").value;
-      if (!email.includes("@")) {
-        alert("Please enter a valid email address.");
-        return false;
-      }
-      document.getElementById("form-status").style.display = "block";
-      return true;
-    }
+    // Show spinner on form submit
+    const form = document.getElementById("contactForm");
+    const spinner = document.getElementById("loadingSpinner");
+    form.addEventListener("submit", function() { spinner.style.display = "block"; });
 
     // Highlight active section
     const sections = document.querySelectorAll("section");
