@@ -1,0 +1,5 @@
+# robots.txt for KCS - Kamakhya Cab Services
+User-agent: *
+Allow: /
+
+Sitemap: https://kamakhyacab.github.io/KCS/sitemap.xml
