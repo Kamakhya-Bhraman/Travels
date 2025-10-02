@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KCS - Kamakhya Cab Services | Car Rental in Varanasi</title>
-    <!-- Favicon -->
-  <link rel="icon" href="Fevicon.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KCS - Kamakhya Cab Services | Most Affordable Cabs in Varanasi</title>
+
+<!-- Favicon -->
+<link rel="icon" href="Fevicon.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="logo.png">
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="KCS - Kamakhya Cab Services offers reliable cab rental services in Varanasi. Book your cab for Outstatation, local tours, airport transfers, and sightseeing.">
@@ -19,295 +20,386 @@
   <meta property="og:title" content="KCS - Kamakhya Cab Services">
   <meta property="og:description" content="Reliable cab rental services in Varanasi for local tours, airport transfers, and sightseeing.">
   <meta property="og:url" content="https://kamakhyacab.github.io/KCS/">
-  <meta property="og:image" content="https://kamakhyacab.github.io/KCS/logo.png">
+  <meta property="og:image" content="https://kamakhyacab.com/logo.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KCS - Kamakhya Cab Services">
   <meta name="twitter:description" content="Reliable cab rental services in Varanasi for local tours, airport transfers, and sightseeing.">
-  <meta name="twitter:image" content="https://kamakhyacab.github.io/KCS/logo.png">
+  <meta name="twitter:image" content="https://kamakhyacab.com/logo.png">
 
-  <!-- Font Awesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"
-  />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #ccffcc;
-      color: #222;
-      line-height: 1.6;
-    }
+<style>
+* { box-sizing: border-box; scroll-behavior: smooth; margin:0; padding:0; }
+body { font-family: 'Poppins', sans-serif; background: #f5f5f5; color: #222; line-height:1.6; }
 
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+/* Header */
+header {
+  background: #E57373;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+header img { height:50px; cursor:pointer; }
+.logo-text { font-weight:700; font-size:1.8rem; color:#fff; text-shadow:0 2px 5px rgba(0,0,0,0.3); }
 
-    header img { height: 50px; cursor: pointer; }
+nav { display:flex; gap:20px; align-items:center; flex-wrap: wrap; }
+nav a { color:white; text-decoration:none; font-weight:600; transition:0.3s; }
+nav a:hover, nav a.active { 
+  color:#FFD54F; 
+  text-decoration:underline; 
+  text-shadow: none; /* removed shadow for better visibility */
+}
 
-    .logo-text {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: gold;
-      margin-left: 10px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
+.hamburger { display:none; flex-direction:column; cursor:pointer; }
+.hamburger div { width:25px; height:3px; background:white; margin:4px 0; }
+.mobile-nav { display:none; flex-direction:column; background-color:#64B5F6; padding:1rem; }
+.mobile-nav a { margin-bottom:0.8rem; color:white; font-weight:bold; }
 
-    nav { display: flex; gap: 20px; align-items: center; }
+/* Hero Section */
+.hero { background: #FFF3E0; color: #222; text-align:center; padding:5rem 1rem; border-radius:0 0 25px 25px; box-shadow: inset 0 0 25px rgba(0,0,0,0.05);}
+.hero h1 { font-size:3rem; font-weight:900; margin-bottom:1rem; color: #DB4437; text-shadow:0 2px 6px rgba(0,0,0,0.15);}
+.hero p { font-size:1.3rem; font-weight:500; margin-bottom:2rem; color:#0F9D58; }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
+.hero-icons { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
+.hero-icons div { text-align:center; font-weight:600; background:#FFF8DC; padding:1.5rem; border-radius:20px; width:180px; box-shadow:0 8px 30px rgba(0,0,0,0.15); transition:0.3s;}
+.hero-icons div:hover { transform: translateY(-8px); box-shadow:0 20px 50px rgba(66,133,244,0.2);}
+.hero-icons i { font-size:2.5rem; margin-bottom:10px; color:white; display:flex; justify-content:center; align-items:center; width:70px; height:70px; border-radius:50%; margin:auto; box-shadow:0 6px 15px rgba(0,0,0,0.2);}
+.hero-icons i.airport { background:#4285F4; } 
+.hero-icons i.local { background:#DB4437; }  
+.hero-icons i.sightseeing { background:#0F9D58; }
 
-    nav a:hover,
-    nav a.active { text-decoration: underline; }
+/* Section Layout */
+.section-alt { border-radius:25px; margin:3rem 0; padding:4rem 1rem; position:relative; box-shadow:0 10px 35px rgba(0,0,0,0.05); }
 
-    nav a i,
-    .mobile-support-icons a i { font-size: 1.3rem; color: white; transition: color 0.3s ease; }
-    nav a i:hover { color: gold; }
-    .mobile-support-icons a i:hover { color: gold; }
+/* Subtle textures */
+.section-alt::before {
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  border-radius:25px;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+  opacity:0.03;
+  z-index:0;
+}
+.section-alt > * { position:relative; z-index:1; }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger div {
-      width: 25px; height: 3px; background: white; margin: 4px 0;
-    }
+/* Gradient section divider */
+.section-divider {
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(90deg, #FFD54F 0%, #FF7043 50%, #42A5F5 100%);
+  margin: 3rem 0;
+  border-radius: 4px;
+}
 
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      background-color: #004aad;
-      padding: 1rem;
-    }
-    .mobile-nav a { margin-bottom: 0.8rem; color: white; text-decoration: none; font-weight: bold; }
-    .mobile-support-icons { display: flex; justify-content: center; gap: 25px; margin-top: 1rem; }
+/* Tariff Section */
+#tariffs.section-alt { background: linear-gradient(120deg, #D0F0C0, #E0F7FA); }
+#tariffs.section-alt h2 { color:#0F9D58; text-decoration:underline; text-shadow:0 1px 2px rgba(0,0,0,0.1); }
 
-    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-    h2 { color: #004aad; margin-bottom: 1rem; text-align: center; }
+/* Highlights Section */
+#highlights.section-alt { background: linear-gradient(120deg, #FFF8DC, #FFF0E0); }
+#highlights.section-alt h2 { color:#DB4437; text-decoration:underline; text-shadow:0 1px 2px rgba(0,0,0,0.1); }
 
-    .card { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+/* Fleet Section */
+#fleet.section-alt { background: linear-gradient(120deg, #BBDEFB, #E3F2FD); }
+#fleet h2 { color:#4285F4; text-decoration:underline; text-shadow:0 1px 2px rgba(0,0,0,0.1); }
 
-    .highlights {
-      background: white;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-    }
-    .highlight-item { background: #f4f9f4; padding: 1.2rem; border-radius: 8px; transition: transform 0.3s ease; }
-    .highlight-item:hover { transform: translateY(-5px); }
-    .highlight-item h3 { color: #28a745; }
+/* Grid Layout */
+.grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
 
-    .contact-form {
-      background: white;
-      padding: 2rem;
-      margin-top: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .contact-form input,
-    .contact-form textarea { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
-    .contact-form button {
-      background-color: #004aad;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .contact-form button:hover { background-color: #003a8c; }
+/* Cards */
+.card, .highlight-item { padding:2rem; border-radius:20px; text-align:center; box-shadow:0 10px 35px rgba(0,0,0,0.1); transition: all 0.3s ease; border:2px solid transparent; }
+#tariffs .card { background:#D0F0C0; border-color:#0F9D58; }
+#highlights .highlight-item { background:#FFF8DC; border-color:#F4B400; }
 
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-    footer a { color: gold; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+/* Fleet Card Filled Background and Dark Image Border */
+#fleet .card {
+  background: linear-gradient(120deg, #BBDEFB, #E3F2FD);
+  border: 2px solid #1E88E5;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  animation: gradientGlow 3s infinite;
+}
+#fleet .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(66,133,244,0.4);
+}
+#fleet .card img {
+  max-height:200px; object-fit:cover;
+  border: 3px solid #1E88E5; /* dark border */
+  border-radius:15px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  margin-bottom:15px;
+}
 
-    @media (max-width: 768px) { nav { display: none; } .hamburger { display: flex; } .mobile-nav.active { display: flex; }
+/* Gradient Glow Animation */
+@keyframes gradientGlow {
+  0% { border-color: #42A5F5; box-shadow: 0 10px 35px rgba(66,133,244,0.3); }
+  50% { border-color: #FFD54F; box-shadow: 0 15px 50px rgba(255,215,79,0.4); }
+  100% { border-color: #42A5F5; box-shadow: 0 10px 35px rgba(66,133,244,0.3); }
+}
 
-    }
+/* Hover effect for other cards */
+#tariffs .card:hover { transform: translateY(-10px); box-shadow:0 20px 50px rgba(15,157,88,0.3); }
+#highlights .highlight-item:hover { transform: translateY(-10px); box-shadow:0 20px 50px rgba(244,180,0,0.3); }
 
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  </style>
+/* Icon Circles */
+.icon-circle { width:70px; height:70px; border-radius:50%; display:flex; justify-content:center; align-items:center; margin:0 auto 15px; font-size:1.8rem; color:white; box-shadow:0 6px 15px rgba(0,0,0,0.2);}
+#tariffs .icon-circle { background:#0F9D58; } 
+#highlights .icon-circle { background:#F4B400; }
+#fleet .icon-circle { background:#4285F4; }
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "KCS - Kamakhya Cab Services",
-    "image": "https://kamakhyacab.github.io/KCS/logo.png",
-    "url": "https://kamakhyacab.github.io/KCS/",
-    "telephone": "+919519251153",
-    "email": "kamakhyacabservices@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kamakhya Road",
-      "addressLocality": "Guwahati",
-      "addressRegion": "Varanasi",
-      "postalCode": "781010",
-      "addressCountry": "IN"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-      ],
-      "opens": "06:00",
-      "closes": "23:00"
-    }
-  }
-  </script>
+/* Card Text */
+.card h3, .highlight-item h3 { margin-top:10px; font-weight:700; color:#4285F4; }
+.card p, .highlight-item p { font-size:1rem; margin:8px 0; }
+.card p span { font-weight:700; color:#DB4437; text-decoration:underline; }
+
+/* Contact Section Card */
+#contact {
+  background: linear-gradient(120deg, #E3F2FD, #BBDEFB);
+  border: 2px solid #0F9D58;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+#contact h2 { color:#0F9D58; text-decoration:underline; text-shadow:0 1px 2px rgba(0,0,0,0.1); }
+
+/* Contact form elements */
+#contact input, #contact textarea, #contact button { position: relative; z-index:1; }
+.contact-form input, .contact-form textarea { width:100%; padding:1rem; margin:0.7rem 0; border:1px solid #ccc; border-radius:12px; font-size:1rem;}
+.contact-form input:focus, .contact-form textarea:focus { border-color:#4285F4; outline:none; box-shadow:0 0 12px rgba(66,133,244,0.3);}
+.contact-form button { background:#4285F4; color:white; padding:12px 25px; border:none; border-radius:12px; cursor:pointer; font-weight:700; font-size:1rem; transition:0.3s;}
+.contact-form button:hover { background:#0F9D58; }
+
+/* Footer */
+footer { background:#37474F; color:white; text-align:center; padding:2rem; font-size:0.9rem; box-shadow:0 -5px 15px rgba(0,0,0,0.2);}
+footer a { color:#FFD54F; text-decoration:none; font-weight:600; }
+footer a:hover { text-decoration:underline; }
+
+/* Responsive */
+@media(max-width:768px){ 
+  .hero h1{font-size:2rem;} 
+  .hero p{font-size:1rem;} 
+  .icon-circle{width:50px;height:50px;font-size:1.3rem;} 
+  .hero-icons div{width:140px; padding:1rem;}
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+</style>
 </head>
-<body>
+<!--
+  Right-click is disabled on the body and contextmenu events are blocked via JS.
+  Note: Disabling context menu and keyboard shortcuts can frustrate some users
+  (developers, accessibility tools). Use only if necessary.
+-->
+<body oncontextmenu="return false;">
 
-  <!-- Header -->
-  <header>
-    <a href="#"><img src="logo.png" alt="KCS Logo" /></a>
-    <div class="logo-text">KCS - Kamakhya Cab Services</div>
+<header>
+<a href="#"><img src="logo.png" alt="KCS Logo"></a>
+<div class="logo-text">KCS - Kamakhya Cab Services</div>
+<nav id="main-nav">
+<a href="#">Home</a>
+<a href="#tariffs">Tariffs</a>
+<a href="#highlights">Highlights</a>
+<a href="#fleet">Fleet</a>
+<a href="#contact">Contact</a>
+<a href="mailto:kamakhyacabservices@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://wa.me/919519251153" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+</nav>
+<div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+</header>
 
-    <nav id="main-nav">
-      <a href="#">Home</a>
-      <a href="#tariffs">Tariffs</a>
-      <a href="#highlights">Highlights</a>
-      <a href="#contact">Contact</a>
-      <a href="mailto:kamakhyacabservices@gmail.com" title="Email Support"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20KCS" target="_blank" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </nav>
+<div class="mobile-nav" id="mobile-nav">
+<a href="#">Home</a><a href="#tariffs">Tariffs</a><a href="#highlights">Highlights</a><a href="#fleet">Fleet</a><a href="#contact">Contact</a>
+<div class="mobile-support-icons">
+<a href="mailto:kamakhyacabservices@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://wa.me/919519251153" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+</div>
 
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu"><div></div><div></div><div></div></div>
-  </header>
+<!-- Hero -->
+<section class="hero">
+<h1>Reliable Cab Services in Varanasi</h1>
+<p><strong>Luxury, Comfort & Timely Service</strong></p>
+<div class="hero-icons">
+<div><i class="fa-solid fa-plane-departure airport"></i><br>Airport Transfer</div>
+<div><i class="fa-solid fa-route local"></i><br>Local Tours</div>
+<div><i class="fa-solid fa-camera sightseeing"></i><br>Sightseeing</div>
+</div>
+</section>
 
-  <!-- Mobile nav -->
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#">Home</a>
-    <a href="#tariffs">Tariffs</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#contact">Contact</a>
-    <div class="mobile-support-icons">
-      <a href="mailto:kamakhyacabservices@gmail.com" title="Email Support"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20KCS" target="_blank" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-  </div>
+<main class="container">
 
-  <main>
-    <!-- Tariff Section -->
-    <section id="tariffs" class="container">
-      <h2>💸 Tariff Plans</h2>
-      <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-        <div class="card">
-          <h3>🕗 8-Hour Round Trip</h3>
-          <p>🛣️ Max: 250 km</p>
-          <p>💰 ₹3125 Fixed</p>
-          <p>⏱️ Extra Hour: ₹200</p>
-          <p>➕ Extra Km: ₹8</p>
-          <p>🚫 No extension post 9 PM</p>
-        </div>
-        <div class="card">
-          <h3>🕛 12-Hour Round Trip</h3>
-          <p>🛣️ Max: 400 km</p>
-          <p>💰 ₹4000 Fixed</p>
-          <p>⏱️ Extra Hour: ₹150</p>
-          <p>➕ Extra Km: ₹7</p>
-          <p>🚫 No extension post 9 PM</p>
-        </div>
-        <div class="card">
-          <h3>🛣️ One Way Trip</h3>
-          <p>💸 ₹13/km (Min 250 km)</p>
-          <p>⏳ Halt > 1 hr: ₹250 + ₹250/hr</p>
-        </div>
-      </div>
-    </section>
+<!-- Tariff Section -->
+<section id="tariffs" class="section-alt">
+<h2>💸 Tariff Plans</h2>
+<div class="grid">
+<div class="card"><div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
+<h3>8-12 Hour Trips</h3>
+<p><span>8-Hour:</span> Max 250 km | ₹3125 | Extra Hour ₹200</p>
+<p><span>12-Hour:</span> Max 400 km | ₹4000 | Extra Hour ₹150</p>
+</div>
+<div class="card"><div class="icon-circle"><i class="fa-solid fa-route"></i></div>
+<h3>Round Trip</h3>
+<p><span>₹10/km</span> (Min 300 km) | Halt > 2 hr: ₹400 + ₹200/hr</p>
+</div>
+<div class="card"><div class="icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+<h3>One Way Trip</h3>
+<p><span>₹13/km</span> (Min 250 km & Max 400) | Halt > 1 hr: ₹250 + ₹250/hr</p>
+</div>
+<div class="card"><div class="icon-circle"><i class="fa-solid fa-car"></i></div>
+<h3>Customized Trip</h3>
+<p>Contact us for rate</p>
+</div>
+</div>
+</section>
 
-    <!-- Highlights -->
-    <section id="highlights" class="container highlights">
-      <h2>Why Travel with KCS?</h2>
-      <div class="highlight-grid">
-        <div class="highlight-item"><h3>💰 Lowest Cost</h3><p>No hidden charges.</p></div>
-        <div class="highlight-item"><h3>⭐ Top Drivers</h3><p>Professional & courteous.</p></div>
-        <div class="highlight-item"><h3>⏰ On Time</h3><p>Always punctual.</p></div>
-        <div class="highlight-item"><h3>🧼 Comfortable</h3><p>Clean, well-maintained cars.</p></div>
-      </div>
-    </section>
+<div class="section-divider"></div>
 
-    <!-- Contact Form -->
-    <section class="contact-form" id="contact">
-      <h2>Contact Us</h2>
-      <form id="contactForm" action="https://formsubmit.co/kamakhyacabservices@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="hidden" name="_subject" value="New Inquiry from KCS Website">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://KamakhyaCab.github.io/KCS/thankyou.html">
-        <button type="submit">Send Message</button>
-      </form>
-      <div id="loadingSpinner" style="display:none; margin-top:20px; text-align:center;">
-        <div style="border:6px solid #f3f3f3; border-top:6px solid #004aad; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto;"></div>
-        <p style="margin-top:10px; color:#004aad; font-weight:bold;">Sending your message...</p>
-      </div>
-    </section>
-  </main>
+<!-- Highlights Section -->
+<section id="highlights" class="section-alt">
+<h2>Why Travel with KCS?</h2>
+<div class="grid">
+<div class="highlight-item"><div class="icon-circle"><i class="fa-solid fa-coins"></i></div><h3>Lowest Cost</h3><p>No hidden charges</p></div>
+<div class="highlight-item"><div class="icon-circle"><i class="fa-solid fa-star"></i></div><h3>Top Drivers</h3><p>Professional & courteous</p></div>
+<div class="highlight-item"><div class="icon-circle"><i class="fa-solid fa-clock"></i></div><h3>On Time</h3><p>Always punctual</p></div>
+<div class="highlight-item"><div class="icon-circle"><i class="fa-solid fa-car-side"></i></div><h3>Comfortable</h3><p>Clean, well-maintained cars</p></div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 KCS - Kamakhya Cab Services. All rights reserved.</p>
-    <p>
-      <a href="mailto:kamakhyacabservices@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> |
-      <a href="https://wa.me/919519251153?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20cab%20with%20KCS" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    </p>
-  </footer>
+<div class="section-divider"></div>
 
-  <script>
-    function toggleMenu() { document.getElementById("mobile-nav").classList.toggle("active"); }
+<!-- Fleet Section -->
+<section id="fleet" class="section-alt">
+<h2>🚗 Our Fleet</h2>
+<div class="grid">
+<div class="card">
+<img src="WagonR.jpg" alt="WagonR">
+<h3>Maruti WagonR</h3>
+<p><strong>Seats:</strong> 5 (Comfortable for 4 members + Driver)</p>
+<p><strong>Safety:</strong> 6 Airbags (Driver, Front Passenger, 2 Curtain, Driver Side, Front Passenger Side)</p>
+<p><strong>Comfort:</strong> Ideal for family or small group trips</p>
+</div>
+</div>
+</section>
 
-    const form = document.getElementById("contactForm");
-    const spinner = document.getElementById("loadingSpinner");
-    form.addEventListener("submit", function() { spinner.style.display = "block"; });
+<div class="section-divider"></div>
 
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach((section) => {
-        const top = section.offsetTop - 80;
-        if (scrollY >= top) current = section.getAttribute("id");
-      });
-      navLinks.forEach((a) => {
-        a.classList.remove("active");
-        if (a.getAttribute("href") === "#" + current) a.classList.add("active");
-      });
-    });
-  </script>
+<!-- Contact Form -->
+<section id="contact" class="section-alt contact-form">
+<h2>📩 Contact Us</h2>
+<form id="contactForm" action="https://formsubmit.co/kamakhyacabservices@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<input type="hidden" name="_subject" value="New Inquiry from KCS Website">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://kamakhyaCab.com/thankyou.html">
+<button type="submit">Send Message</button>
+</form>
+<div id="loadingSpinner" style="display:none; text-align:center; margin-top:20px;">
+<div style="border:6px solid #f3f3f3; border-top:6px solid #4285F4; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:auto;"></div>
+<p style="color:#4285F4; font-weight:bold;">Sending your message...</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2025 KCS - Kamakhya Cab Services. All rights reserved.</p>
+<p><a href="mailto:kamakhyacabservices@gmail.com"><i class="fa-solid fa-envelope"></i></a> | <a href="https://wa.me/919519251153" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></p>
+</footer>
+
+<script>
+/* ---------- UI helpers ---------- */
+function toggleMenu(){ 
+  const nav = document.getElementById("mobile-nav");
+  nav.classList.toggle("active"); 
+}
+
+/* ---------- Contact form spinner ---------- */
+const form=document.getElementById("contactForm"); 
+const spinner=document.getElementById("loadingSpinner");
+if(form){
+  form.addEventListener("submit",()=>{ spinner.style.display="block"; });
+}
+
+/* ---------- Active nav on scroll ---------- */
+const sections=document.querySelectorAll("section"); 
+const navLinks=document.querySelectorAll("nav a");
+window.addEventListener("scroll",()=>{ 
+  let current=""; 
+  sections.forEach(s=>{
+    if(window.scrollY>=s.offsetTop-80) current=s.id;
+  });
+  navLinks.forEach(a=>{
+    a.classList.remove("active"); 
+    if(a.getAttribute("href")==="#"+current) a.classList.add("active");
+  });
+});
+
+/* ---------- Disable right-click and block common dev shortcuts ---------- */
+
+/*
+  Note: Disabling context menu & keyboard shortcuts is not a foolproof protection.
+  Savvy users can still view source or inspect elements. Use with caution.
+*/
+
+/* Block context menu (right-click) */
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+}, { passive: false });
+
+/* Block selection via long-tap (mobile) and text selection fallback (optional) */
+document.addEventListener('selectstart', function(e) {
+  // Uncomment next line to block text selection entirely
+  // e.preventDefault();
+}, { passive: false });
+
+/* Block common keys: F12, Ctrl+Shift+I/C/J, Ctrl+U, Ctrl+S, Ctrl+P */
+document.addEventListener('keydown', function(e) {
+  // F12
+  if (e.key === 'F12') {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+Shift+I / J / C  (Inspect / Console / Inspect element)
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+U (View Source)
+  if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+    e.preventDefault();
+    return false;
+  }
+  // Ctrl+S (Save) and Ctrl+P (Print) — optional to block
+  if (e.ctrlKey && (e.key === 'S' || e.key === 's' || e.key === 'P' || e.key === 'p')) {
+    e.preventDefault();
+    return false;
+  }
+}, { passive: false });
+
+/* Extra: hide console message for casual users (nice-to-have) */
+try {
+  console.log('%cKamakhya Cab Services — Website Protection Enabled', 'color: #4285F4; font-weight: bold;');
+} catch(e) { /* ignore */ }
+</script>
+
 </body>
 </html>
